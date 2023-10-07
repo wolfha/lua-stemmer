@@ -1,0 +1,14 @@
+Source: lua-stemmer
+Section: utils
+Priority: optional
+Maintainer: augmentedlogic development <dev@augmentedlogic.com>
+Homepage: https://github.com/wolfha/lua-stemmer.git
+
+Package: lua-stemmer
+Architecture: any
+Section: utils
+Priority: optional
+Depends: libc6 (>= 2.27), libstemmer0d
+Description: lua binding to libstemmer
+ lua binding to libstemmer word stemming library
+

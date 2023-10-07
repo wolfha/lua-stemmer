@@ -44,7 +44,7 @@ static int l_stem(lua_State *L)
     struct sb_stemmer * stemmer;
     stemmer = sb_stemmer_new(language, charenc);
     if (stemmer == 0) {
-       fprintf(stderr, "language `%s' not available\n", language);
+        fprintf(stderr, "language `%s' not available\n", language);
     }
 
     // check or nil? sb_stemmer_length(stemmer) > 0
@@ -53,7 +53,7 @@ static int l_stem(lua_State *L)
     sb_symbol * b = input;
     // string to lower
     for(int i = 0; b[i]; i++){
-      b[i] = tolower(b[i]);
+        b[i] = tolower(b[i]);
     }
 
 
@@ -61,13 +61,13 @@ static int l_stem(lua_State *L)
     const sb_symbol *stemmed = sb_stemmer_stem(stemmer, b, i);
     const char *stemmed_s = stemmed;
     if (stemmed == NULL)
-                {
-                    fprintf(stderr, "Out of memory");
-                    exit(1);
-                }
+    {
+        fprintf(stderr, "Out of memory");
+        exit(1);
+    }
     else {
-       lua_pushstring(L, stemmed_s);
-       sb_stemmer_delete(stemmer);
+        lua_pushstring(L, stemmed_s);
+        sb_stemmer_delete(stemmer);
     }
 
     return 1;

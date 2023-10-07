@@ -3,3 +3,10 @@ src/*.so
 src/*.o
 src/test.lua
 todo.txt
+debian/lua-stemmer/
+debian/lua-stemmer.substvars
+debian/lua-stemmer.debhelper.log
+debian/debhelper-build-stamp
+debian/files
+debian/.debhelper
+
